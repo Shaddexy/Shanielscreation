@@ -17,7 +17,6 @@ import {
   ChevronRight,
   Menu,
   X,
-  Sparkles,
   Layers,
   TrendingUp,
   BrainCircuit
@@ -28,10 +27,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-cyan-500/10 bg-slate-950/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-              <Sparkles className="text-white w-5 h-5 md:w-6 md:h-6" />
-            </div>
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://i.ibb.co/0y2wmX81/IMG-4856.png" 
+              alt="AI Business Mastery Logo" 
+              referrerPolicy="no-referrer"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-lg shadow-lg shadow-cyan-500/20"
+            />
             <span className="text-lg md:text-xl font-bold tracking-tight text-white">
               AI Business <span className="text-cyan-400">Mastery</span>
             </span>
@@ -39,7 +41,7 @@ const Navbar = () => {
           
           <div className="flex items-center gap-4">
             <a 
-              href="https://aibusinessmastery.me/r/C48D95"
+              href="https://bit.ly/4bwKlmT"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 md:px-6 md:py-2.5 rounded-full bg-cyan-500 text-slate-950 text-xs md:text-sm font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20 active:scale-95 inline-block"
@@ -53,8 +55,25 @@ const Navbar = () => {
   );
 };
 
+const WhatIsAI = () => (
+  <section className="py-24 bg-slate-900/50 relative overflow-hidden">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
+        <BrainCircuit className="w-4 h-4 text-cyan-400" />
+        <span className="text-xs font-bold tracking-widest text-cyan-400 uppercase">THE CORE MISSION</span>
+      </div>
+      <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">
+        What is <span className="text-cyan-400">AI Business Mastery?</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium">
+        AI Business Mastery is a <span className="text-white font-bold">72-hour implementation challenge</span> designed for beginners and business owners who want to move from confusion to a real, sellable AI-powered offer using free AI tools and a smartphone.
+      </p>
+    </div>
+  </section>
+);
+
 const Hero = () => (
-  <section className="relative pt-20 pb-12 md:pt-40 md:pb-24 overflow-hidden">
+  <section className="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden">
     {/* Background Grid & Glow */}
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
@@ -67,29 +86,37 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4 md:mb-8">
+        <div className="flex justify-center mb-6 md:mb-8">
+          <img 
+            src="https://i.ibb.co/0y2wmX81/IMG-4856.png" 
+            alt="AI Business Mastery Logo" 
+            referrerPolicy="no-referrer"
+            className="w-20 h-20 md:w-28 md:h-28 object-contain rounded-2xl shadow-2xl shadow-cyan-500/20"
+          />
+        </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6 md:mb-10">
           <Zap className="w-3.5 h-3.5 md:w-4 md:h-4 text-cyan-400" />
           <span className="text-[10px] md:text-xs font-bold tracking-widest text-cyan-400 uppercase">72-Hour Implementation Challenge</span>
         </div>
         
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-3 md:mb-6 leading-[0.95] md:leading-[0.9]">
-          FROM CONFUSION TO <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">CLARITY IN 72 HOURS</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 md:mb-8 leading-[1.1] md:leading-tight max-w-4xl mx-auto uppercase">
+          TURN AI CONFUSION <br className="hidden sm:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">INTO A REAL OFFER</span>
         </h1>
 
-        <p className="max-w-xl mx-auto text-sm md:text-xl text-slate-400 mb-6 md:mb-10 leading-relaxed px-4">
-          Stop learning AI in circles. Finally build a clear, sellable offer with a practical path designed for beginners and business owners.
+        <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-400/90 mb-10 md:mb-12 leading-relaxed px-4 font-medium">
+          Stop learning AI in circles. Follow a clear path to build a simple, sellable offer with free tools and your smartphone.
         </p>
 
-        <div className="flex flex-col items-center gap-3 mb-8 md:mb-16">
+        <div className="flex flex-col items-center gap-4 mb-12 md:mb-20">
           <a 
-            href="https://aibusinessmastery.me/r/C48D95"
+            href="https://bit.ly/4bwKlmT"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-full max-w-xs md:max-w-none md:w-auto px-8 py-3.5 md:px-10 md:py-5 rounded-full bg-cyan-500 text-slate-950 font-black text-base md:text-xl hover:bg-cyan-400 transition-all shadow-[0_0_40px_rgba(6,182,212,0.3)] active:scale-95 inline-block"
+            className="group relative w-full max-w-xs md:max-w-none md:w-auto px-10 py-4 md:px-12 md:py-5 rounded-full bg-cyan-500 text-slate-950 font-bold text-sm md:text-base tracking-widest hover:bg-cyan-400 transition-all shadow-[0_0_30px_rgba(6,182,212,0.25)] active:scale-95 inline-block uppercase"
           >
             <span className="flex items-center justify-center gap-2">
-              START THE 72-HOUR CHALLENGE <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              SEE HOW IT WORKS <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           </a>
           <div className="flex items-center gap-2 text-slate-500">
@@ -422,7 +449,7 @@ const Results = () => (
           </div>
           <div className="mt-10">
             <a 
-              href="https://aibusinessmastery.me/r/C48D95"
+              href="https://bit.ly/4bwKlmT"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full md:w-auto px-10 py-5 rounded-full bg-cyan-500 text-slate-950 font-black text-xl hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20 active:scale-95 inline-block text-center"
@@ -481,7 +508,7 @@ const Recommendation = () => (
                 The structured path to turn AI into a real, sellable offer. Join through my link and get exclusive bonuses designed to accelerate your start.
               </p>
               <a 
-                href="https://aibusinessmastery.me/r/C48D95"
+                href="https://bit.ly/4bwKlmT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto px-10 py-5 rounded-full bg-cyan-500 text-slate-950 font-black text-xl hover:bg-cyan-400 transition-all shadow-lg active:scale-95 inline-block text-center"
@@ -492,7 +519,7 @@ const Recommendation = () => (
             <div className="w-full md:w-72 aspect-square rounded-3xl bg-slate-900 border border-white/10 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent"></div>
               <img 
-                src="https://i.ibb.co/575qtYF/IMG-4856.png" 
+                src="https://i.ibb.co/0y2wmX81/IMG-4856.png" 
                 alt="AI Business Mastery Mockup" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -557,36 +584,123 @@ const Bonuses = () => (
   </section>
 );
 
-const DecisionCTA = () => (
-  <section className="py-24 bg-slate-900 relative overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#06b6d410_0%,transparent_70%)]"></div>
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <h2 className="text-4xl md:text-5xl font-black text-white mb-12">YOUR DECISION POINT</h2>
-      
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
-        <div className="p-8 rounded-3xl bg-slate-950/50 border border-white/5 text-left">
-          <span className="text-red-500/50 font-bold uppercase tracking-widest text-xs mb-4 block">Option A</span>
-          <p className="text-slate-400">Keep saving content, keep postponing action, and hope things become clearer on their own.</p>
-        </div>
-        <div className="p-8 rounded-3xl bg-cyan-500/5 border border-cyan-500/20 text-left">
-          <span className="text-cyan-400 font-bold uppercase tracking-widest text-xs mb-4 block">Option B</span>
-          <p className="text-slate-200">Follow a structured path and finally see what it looks like to build something real.</p>
-        </div>
+const Testimonials = () => (
+  <section className="py-24 bg-slate-950 relative overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
+          What Our <span className="text-cyan-400">Students Say</span>
+        </h2>
+        <p className="text-slate-400 max-w-2xl mx-auto">Real results from people who stopped learning and started building.</p>
       </div>
 
-      <div className="space-y-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            quote: "The most valuable training I bought with my money in 2025.",
+            author: "Elizabeth",
+            role: "Student"
+          },
+          {
+            quote: "I got a $1,500 retainer gig.",
+            author: "Joshua",
+            role: "AI Strategist"
+          },
+          {
+            quote: "AI Mastery is one of the best investments I made this January.",
+            author: "Aminat",
+            role: "Business Owner"
+          },
+          {
+            quote: "I have never regretted enrolling because it keeps adding value to me.",
+            author: "Elizabeth",
+            role: "Digital Freedom Coach"
+          }
+        ].map((t, i) => (
+          <motion.div 
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="p-8 rounded-3xl bg-slate-900 border border-cyan-500/10 hover:border-cyan-500/30 transition-all group flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Zap key={i} className="w-3 h-3 text-cyan-400 fill-cyan-400" />
+                ))}
+              </div>
+              <p className="text-slate-200 text-lg font-medium leading-relaxed italic mb-6">
+                "{t.quote}"
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
+                {t.author[0]}
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm">{t.author}</p>
+                <p className="text-cyan-400/60 text-[10px] uppercase tracking-widest font-bold">{t.role}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const PriceSection = () => (
+  <section className="py-24 bg-slate-900/50 border-y border-white/5">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
+        <TrendingUp className="w-4 h-4 text-cyan-400" />
+        <span className="text-xs font-bold tracking-widest text-cyan-400 uppercase">LIMITED TIME OFFER</span>
+      </div>
+      <h2 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">
+        INVESTMENT: <span className="text-cyan-400">₦50,000</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-slate-400 font-medium">
+        One-time payment. Lifetime access.
+      </p>
+    </div>
+  </section>
+);
+
+const DecisionCTA = () => (
+  <section className="py-24 bg-slate-950 relative overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#06b6d410_0%,transparent_70%)]"></div>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase">THE CHOICE IS SIMPLE.</h2>
+      
+      <div className="space-y-6 mb-16">
+        <p className="text-2xl md:text-3xl text-slate-300 font-medium">
+          72 hours will pass anyway.
+        </p>
+        <p className="text-3xl md:text-4xl font-black text-white leading-tight">
+          The real question is: <br />
+          <span className="text-cyan-400">what will you have to show for it?</span>
+        </p>
+      </div>
+
+      <div className="p-10 md:p-16 rounded-[3rem] bg-gradient-to-br from-slate-900 to-slate-950 border border-cyan-500/20 mb-12">
+        <h3 className="text-3xl md:text-5xl font-black text-white mb-4">₦50,000</h3>
+        <p className="text-slate-400 text-lg mb-10">One-time payment. Lifetime access.</p>
+        
         <a 
-          href="https://aibusinessmastery.me/r/C48D95"
+          href="https://bit.ly/4bwKlmT"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-12 py-6 rounded-full bg-cyan-500 text-slate-950 font-black text-2xl hover:bg-cyan-400 transition-all shadow-[0_0_50px_rgba(6,182,212,0.4)] active:scale-95 inline-block"
+          className="w-full md:w-auto px-12 py-6 rounded-full bg-cyan-500 text-slate-950 font-black text-2xl hover:bg-cyan-400 transition-all shadow-[0_0_50px_rgba(6,182,212,0.4)] active:scale-95 inline-block uppercase tracking-tight"
         >
-          YES, I WANT CLARITY
+          JOIN AI BUSINESS MASTERY
         </a>
-        <div className="flex items-center justify-center gap-2 text-slate-400">
-          <MessageSquare className="w-5 h-5 text-cyan-400" />
-          <p className="text-sm font-medium">Send me a message after joining to receive your bonus pack.</p>
-        </div>
+      </div>
+
+      <div className="flex items-center justify-center gap-2 text-slate-400">
+        <MessageSquare className="w-5 h-5 text-cyan-400" />
+        <p className="text-sm font-medium">Send me a message after joining to receive your bonus pack.</p>
       </div>
     </div>
   </section>
@@ -596,10 +710,15 @@ const SignatureClose = () => (
   <footer className="py-24 bg-slate-950 border-t border-white/5">
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div className="mb-12">
-        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 mx-auto mb-6 flex items-center justify-center shadow-xl">
-          <span className="text-2xl font-black text-white">SN</span>
+        <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-6 border-2 border-cyan-500/30 shadow-xl shadow-cyan-500/20">
+          <img 
+            src="https://i.ibb.co/KxMmSD7c/d6a1c4c1-85c8-48a6-82ca-485dde4c9647.jpg" 
+            alt="Shaddai Nathaniel" 
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover"
+          />
         </div>
-        <h4 className="text-xl font-bold text-white">Shaddai Nathaniel</h4>
+        <h4 className="text-xl font-bold text-white">Shaddai Nathaniel <span className="text-cyan-400 font-medium">(also known as Ai Mama)</span></h4>
       </div>
       
       <div className="space-y-6 text-slate-400 text-lg leading-relaxed italic">
@@ -618,23 +737,108 @@ const SignatureClose = () => (
   </footer>
 );
 
+const SocialProof = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  const notifications = [
+    { name: "Michael C.", action: "just purchased AI Business Mastery", location: "Lagos, Nigeria", time: "just now" },
+    { name: "Joshua A.", action: "just joined the challenge", location: "Abuja, Nigeria", time: "2 mins ago" },
+    { name: "Elizabeth O.", action: "requested access", location: "Port Harcourt, Nigeria", time: "5 mins ago" },
+    { name: "Aminat M.", action: "joined the waitlist", location: "Ibadan, Nigeria", time: "7 mins ago" },
+    { name: "David K.", action: "just purchased AI Business Mastery", location: "Nairobi, Kenya", time: "just now" },
+    { name: "Sarah L.", action: "just joined the challenge", location: "Accra, Ghana", time: "1 min ago" },
+    { name: "Samuel T.", action: "requested access", location: "Kumasi, Ghana", time: "4 mins ago" },
+    { name: "Blessing E.", action: "joined the waitlist", location: "Enugu, Nigeria", time: "10 mins ago" },
+    { name: "Chidi O.", action: "just purchased AI Business Mastery", location: "Lagos, Nigeria", time: "just now" },
+    { name: "Favour I.", action: "just joined the challenge", location: "Benin City, Nigeria", time: "3 mins ago" }
+  ];
+
+  React.useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    let intervalId: NodeJS.Timeout;
+
+    const cycle = () => {
+      setIsVisible(true);
+      timeoutId = setTimeout(() => {
+        setIsVisible(false);
+        // Change index after it fades out
+        setTimeout(() => {
+          setCurrentIndex((prev) => (prev + 1) % notifications.length);
+        }, 1000);
+      }, 5000); // Stay for 5s
+    };
+
+    // Initial show after 3s
+    const startTimeout = setTimeout(cycle, 3000);
+
+    // Repeat every 12s
+    intervalId = setInterval(cycle, 12000);
+
+    return () => {
+      clearTimeout(startTimeout);
+      clearTimeout(timeoutId);
+      clearInterval(intervalId);
+    };
+  }, [notifications.length]);
+
+  const current = notifications[currentIndex];
+
+  return (
+    <div className="fixed bottom-6 left-4 md:bottom-8 md:left-8 z-[100] pointer-events-none w-[calc(100%-2rem)] md:w-auto max-w-[280px] sm:max-w-sm">
+      <motion.div
+        initial={{ opacity: 0, x: -20, scale: 0.95 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          x: isVisible ? 0 : -20, 
+          scale: isVisible ? 1 : 0.95 
+        }}
+        transition={{ 
+          duration: 0.6, 
+          ease: [0.16, 1, 0.3, 1]
+        }}
+        className="bg-slate-950/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-4 shadow-[0_8px_32px_rgba(6,182,212,0.15)] flex items-center gap-4"
+      >
+        <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center shrink-0 border border-green-500/20">
+          <CheckCircle2 className="w-5 h-5 text-green-400" />
+        </div>
+        <div className="flex flex-col min-w-0">
+          <p className="text-white font-bold text-sm truncate leading-tight">
+            {current.name}
+          </p>
+          <p className="text-cyan-400 text-[11px] font-medium leading-tight mt-0.5">
+            {current.action}
+          </p>
+          <p className="text-slate-500 text-[10px] mt-1.5 font-medium">
+            {current.location} • {current.time}
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
       <Navbar />
       <main>
         <Hero />
+        <WhatIsAI />
         <StorySection />
         <JustLikeYou />
         <BreakingPoint />
         <Discovery />
         <Transformation />
         <Results />
+        <Testimonials />
         <ReaderParallel />
         <Recommendation />
         <Bonuses />
+        <PriceSection />
         <DecisionCTA />
         <SignatureClose />
+        <SocialProof />
       </main>
     </div>
   );
